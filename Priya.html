@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Priyadharshini | Full Stack Developer</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- React -->
+    <script
+        src="https://unpkg.com/react@18/umd/react.development.js"
+        crossorigin>
+    </script>
+
+    <script
+        src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+        crossorigin>
+    </script>
+
+    <script
+        src="https://unpkg.com/@babel/standalone/babel.min.js">
+    </script>
+
+</head>
+
+<body>
+
+<!-- ================= BACKGROUND VIDEO ================= -->
+
+<div class="video-background">
+
+    <video
+        autoplay
+        muted
+        loop
+        playsinline
+    >
+
+        <source
+            src="assets/Background video.mp4"
+            type="video/mp4"
+        >
+
+    </video>
+
+</div>
+
+<div class="overlay"></div>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <img
+            src="assests/p letter.jpg"
+            alt="Logo"
+        >
+
+        <span>Priya Portfolio</span>
+
+    </div>
+
+
+    <nav>
+
+        <a href="#home">Home</a>
+
+        <a href="#about">About</a>
+
+        <a href="#skills">Skills</a>
+
+        <a href="#experience">Experience</a>
+
+        <a href="#projects">Projects</a>
+
+        <a href="#education">Education</a>
+
+        <a href="#certifications">Certificates</a>
+
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+</header>
+
+
+<!-- ================= HOME ================= -->
+
+<section id="home" class="home">
+
+    <div class="home-content">
+
+        <p class="hello">
+            Hello 👋
+        </p>
+
+        <h1>
+            I'm
+            <span>PRIYADHARSHINI M</span>
+        </h1>
+
+        <h2 id="typing"></h2>
+
+        <p>
+
+            Computer Science Engineering graduate with a strong
+            interest in Full Stack Web Development.
+
+            I enjoy creating modern, responsive and
+            user-friendly web applications.
+
+        </p>
+
+
+        <div class="buttons">
+
+            <a
+                href="PRIYA RESUME(2).pdf"
+                download
+                class="btn"
+            >
+
+                <i class="fa-solid fa-download"></i>
+
+                Download Resume
+
+            </a>
+
+
+            <a
+                href="#contact"
+                class="btn contact-btn"
+            >
+
+                Contact Me
+
+            </a>
+
+        </div>
+
+
+        <!-- SOCIAL ICONS -->
+
+        <div class="social-icons">
+
+            <a
+                href="https://github.com/mspriyadharshini"
+                target="_blank"
+            >
+            <img src="github.png">
+
+                <i class="fa-brands fa-github"></i>
+
+            </a>
+
+
+            <a
+                href="https://www.linkedin.com/in/priya-dharshini-50a22a32b/"
+                target="_blank"
+            >
+            <img src="LinkedIn.png">
+
+                <i class="fa-brands fa-linkedin"></i>
+
+            </a>
+
+
+            <a
+                href="mailto:mspriyadharshini3@gmail.com"
+            >
+
+                <i class="fa-solid fa-envelope"></i>
+
+            </a>
+
+
+            <a
+                href="tel:+916369023280"
+            >
+
+                <i class="fa-solid fa-phone"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- PROFILE -->
+
+    <div class="home-image">
+
+        <div class="image-border">
+
+            <img
+                src="assets/my photo.jpg"
+                alt="Priyadharshini"
+            >
+
+        </div>
+
+        <h3>PRIYADHARSHINI</h3>
+
+        <p>Full Stack Developer</p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section
+    id="about"
+    class="section reveal"
+>
+
+    <h2 class="section-title">
+        About <span>Me</span>
+    </h2>
+
+
+    <div class="about-card">
+
+        <p>
+            I am Priyadharshini M, a Computer Science
+            Engineering graduate with a strong interest
+            in Full Stack Web Development.
+        </p>
+
+        <p>
+            I have knowledge of HTML, CSS, JavaScript,
+            React, Python and MySQL.
+        </p>
+
+        <p>
+            I enjoy building responsive and user-friendly
+            websites and web applications.
+        </p>
+
+        <p>
+            I am a quick learner and passionate about
+            exploring new technologies.
+        </p>
+
+        <p>
+            My goal is to start my career as a Software
+            Developer and contribute to innovative projects.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= REACT SKILLS ================= -->
+
+<section
+    id="skills"
+    class="section reveal"
+>
+
+    <h2 class="section-title">
+        My <span>Skills</span>
+    </h2>
+
+
+    <div id="skills-root"></div>
+
+</section>
+
+
+<!-- ================= REACT PROJECTS ================= -->
+
+<section
+    id="projects"
+    class="section reveal"
+>
+
+    <h2 class="section-title">
+        My <span>Projects</span>
+    </h2>
+
+
+    <div id="projects-root"></div>
+
+</section>
+
+
+<!-- ================= EDUCATION ================= -->
+
+<section
+    id="education"
+    class="section reveal"
+>
+
+    <h2 class="section-title">
+        My <span>Education</span>
+    </h2>
+
+
+    <div class="education-card">
+
+        <div class="education-icon">
+            🎓
+        </div>
+
+
+        <h3>
+            Bachelor of Engineering
+        </h3>
+
+
+        <h4>
+            Computer Science and Engineering
+        </h4>
+
+
+        <p>
+            <strong>College:</strong>
+            Annapoorana Engineering College
+        </p>
+
+
+        <p>
+            <strong>Location:</strong>
+            Periyaseeragapadi, Salem
+        </p>
+
+
+        <p>
+            <strong>University:</strong>
+            Anna University
+        </p>
+
+
+        <p>
+            <strong>Duration:</strong>
+            2022 - 2026
+        </p>
+
+
+        <p>
+            <strong>CGPA:</strong>
+            8.75
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CERTIFICATES ================= -->
+
+<section
+    id="certifications"
+    class="section reveal"
+>
+
+    <h2 class="section-title">
+        My <span>Certificates</span>
+    </h2>
+
+
+    <div id="certificates-root"></div>
+
+</section>
+
+
+<!-- ================= QR ================= -->
+
+<section
+    id="qr"
+    class="section qr-section reveal"
+>
+
+    <h2 class="section-title">
+
+        Scan My
+        <span>Resume</span>
+
+    </h2>
+
+
+    <div class="qr-card">
+
+        <div id="qrcode"></div>
+
+        <h3>
+            📱 Scan Me
+        </h3>
+
+        <p>
+            Scan this QR code to open my Resume
+            website on your mobile.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section
+    id="contact"
+    class="section reveal"
+>
+
+    <h2 class="section-title">
+        Contact <span>Me</span>
+    </h2>
+
+
+    <form
+        id="contactForm"
+        action="https://formspree.io/f/xkodanyg"
+        method="POST"
+    >
+
+        <input
+            type="text"
+            name="name"
+            placeholder="Full Name"
+            required
+        >
+
+
+        <input
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            required
+        >
+
+
+        <input
+            type="number"
+            name="age"
+            placeholder="Age"
+            min="18"
+            max="100"
+        >
+
+
+        <select
+            name="gender"
+            required
+        >
+
+            <option value="">
+                Select Gender
+            </option>
+
+            <option value="Male">
+                Male
+            </option>
+
+            <option value="Female">
+                Female
+            </option>
+
+            <option value="Other">
+                Other
+            </option>
+
+        </select>
+
+
+        <input
+            type="tel"
+            name="phone"
+            placeholder="Phone Number"
+        >
+
+
+        <textarea
+            name="message"
+            rows="6"
+            placeholder="Write your message..."
+            required
+        ></textarea>
+
+
+        <button type="submit">
+
+            Send Message
+            <i class="fa-solid fa-paper-plane"></i>
+
+        </button>
+
+    </form>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <h3>
+        Priyadharshini M
+    </h3>
+
+    <p>
+        Aspiring Full Stack Developer
+    </p>
+
+    <p>
+        © 2026 Priyadharshini |
+        All Rights Reserved
+    </p>
+
+</footer>
+
+
+<!-- ================= QR LIBRARY ================= -->
+
+<script
+    src="C:\Users\DELL\Desktop\PORTFOLIO\Priyaportfolio\src\assets\Resume QR code.png">
+</script>
+
+
+<!-- JavaScript -->
+
+<script src="script.js"></script>
+
+
+<!-- React Components -->
+
+<script
+    type="text/babel"
+    src="react-app/Skills.jsx">
+</script>
+
+<script
+    type="text/babel"
+    src="react-app/Projects.jsx">
+</script>
+
+<script
+    type="text/babel"
+    src="react-app/Certificates.jsx">
+</script>
+
+</body>
+
+</html>
