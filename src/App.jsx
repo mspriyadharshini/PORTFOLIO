@@ -17,8 +17,12 @@ import presentation2 from "./assets/presentation2.jpg";
 import presentation3 from "./assets/presentation3.jpg";
 
 function App() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [showTopButton, setShowTopButton] = useState(false);
+const [menuOpen, setMenuOpen] = useState(false);
+const [showTopButton, setShowTopButton] = useState(false);
+
+const [showWelcome, setShowWelcome] = useState(true);
+const [visitorName, setVisitorName] = useState("");
+const [welcomeStep, setWelcomeStep] = useState(1);
 
   /* ================= TYPING EFFECT ================= */
 
@@ -148,6 +152,78 @@ function App() {
 
   return (
     <div className="portfolio">
+     {showWelcome && (
+  <div className="welcome-overlay">
+
+    {welcomeStep === 1 ? (
+      /* ================= NAME POPUP ================= */
+      <div className="welcome-popup">
+
+        <div className="welcome-icon">
+          👋
+        </div>
+
+        <h2>Welcome!</h2>
+
+        <p>
+          Before you explore my portfolio,
+          <br />
+          may I know your name?
+        </p>
+
+        <input
+          type="text"
+          placeholder="Enter your name"
+          value={visitorName}
+          onChange={(e) => setVisitorName(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" && visitorName.trim()) {
+              setWelcomeStep(2);
+            }
+          }}
+          autoFocus
+        />
+
+        <button
+          onClick={() => {
+            if (visitorName.trim()) {
+              setWelcomeStep(2);
+            }
+          }}
+        >
+          Continue ✨
+        </button>
+
+      </div>
+
+    ) : (
+
+      /* ================= THANK YOU POPUP ================= */
+      <div className="welcome-popup">
+
+        <div className="welcome-icon">
+          ✨
+        </div>
+
+        <h2>
+          Thank You, {visitorName.trim()}!
+        </h2>
+
+        <p>
+          Welcome to my portfolio! 💙
+        </p>
+
+        <button
+          onClick={() => setShowWelcome(false)}
+        >
+          Explore Portfolio 🚀
+        </button>
+
+      </div>
+    )}
+
+  </div>
+)}
 
       {/* ================= BACKGROUND VIDEO ================= */}
 
@@ -284,13 +360,13 @@ function App() {
               View Projects
             </a>
 
-            <a
-              href="/PRIYA_RESUME.pdf"
-              download="Priyadharshini_Resume.pdf"
-              className="btn"
-            >
-              📄 Download Resume
-            </a>
+          <a
+  href="/Resume.pdf"
+  download="Priyadharshini_Resume.pdf"
+  className="btn"
+>
+  📄 Download Resume
+</a>
 
             <a href="#contact" className="btn outline">
               Contact Me
@@ -879,12 +955,12 @@ function App() {
        <div className="qr-section">
   <h3>Scan My Resume</h3>
 
-  <QRCodeCanvas
-    value="http://192.168.43.240:5174/PRIYA_RESUME.pdf"
-    size={200}
-    level="H"
-    includeMargin={true}
-  />
+ <QRCodeCanvas
+  value="http://192.168.43.240:5174/Resume.pdf"
+  size={200}
+  level="H"
+  includeMargin={true}
+/>
 
   <p>Scan to view my Resume</p>
 </div>
